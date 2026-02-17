@@ -4,12 +4,15 @@ import { useEffect, useState } from "react";
 export default function PromocionesPage() {
   const [promociones, setPromociones] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:3001/api/promociones")
-      .then(res => res.json())
-      .then(data => setPromociones(data))
-      .catch(err => console.error("Error al cargar promociones:", err));
-  }, []);
+useEffect(() => {
+  fetch("http://localhost:3001/api/promociones")
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      return res.json();
+    })
+    .then(data => setPromociones(data))
+    .catch(err => console.error("Error al cargar promociones:", err));
+}, []);
 
   return (
     <div style={{ backgroundColor: "black", color: "white", padding: "20px" }}>

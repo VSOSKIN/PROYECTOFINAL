@@ -29,7 +29,7 @@ CREATE TABLE `promociones` (
   `cuerpo` text NOT NULL,
   `imagen_id` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `promociones` (
 
 LOCK TABLES `promociones` WRITE;
 /*!40000 ALTER TABLE `promociones` DISABLE KEYS */;
-INSERT INTO `promociones` VALUES (1,'perro','¡El mejor amigo peludo!','Descuento en huesos, pelotas y abrigos para que tu perro luzca increíble. ¡No olvides su selfie semanal!','https://res.cloudinary.com/dhglqmt1n/image/upload/v1771006252/promociones/wzfrdxdqvv2cthhksaml.jpg'),(2,'gato','Maullidos irresistibles','Promoción en rascadores, comida gourmet y juguetes que harán que tu gato gobierne la casa. ¡Incluye tutorial de siestas profesionales!','https://res.cloudinary.com/dhglqmt1n/image/upload/v1771006264/promociones/ohmh1nizcmuwyaaomptr.jpg'),(3,'ave','Pájaros felices','Oferta especial en semillas, jaulas decorativas y accesorios para que tus aves canten sin parar. ¡Acompañadas de consejos de canto matutino!',NULL),(4,'pez','Fiesta acuática','Promoción en acuarios, peces exóticos y decoración submarina. ¡Convierte tu sala en un océano tropical sin mojarte!',NULL),(12,'prueba1','prueba1 ','imagen','https://res.cloudinary.com/dhglqmt1n/image/upload/v1771005934/promociones/svzzksg7wo3tul4cddcy.jpg'),(13,'gato','Maullidos irresistibles',',,dfkfk','https://res.cloudinary.com/dhglqmt1n/image/upload/v1771006690/promociones/wizdvpyxb7yzbftnzj7l.jpg');
+INSERT INTO `promociones` VALUES (1,'perro','¡El mejor amigo peludo!','Descuento en huesos, pelotas y abrigos para que tu perro luzca increíble. ¡No olvides su selfie semanal!','https://res.cloudinary.com/dhglqmt1n/image/upload/v1771298725/bqoznbstw8uhme245ipn.jpg'),(2,'gato','Maullidos irresistibles','Promoción en rascadores, comida gourmet y juguetes que harán que tu gato gobierne la casa. ¡Incluye tutorial de siestas profesionales!','https://res.cloudinary.com/dhglqmt1n/image/upload/v1771298738/eyft2gztssibda31b3gb.jpg'),(3,'ave','Pájaros felices','Oferta especial en semillas, jaulas decorativas y accesorios para que tus aves canten sin parar. ¡Acompañadas de consejos de canto matutino!','https://res.cloudinary.com/dhglqmt1n/image/upload/v1771298749/hnscdgsnsrkvnbigycb9.jpg'),(4,'pez','Fiesta acuática','Promoción en acuarios, peces exóticos y decoración submarina. ¡Convierte tu sala en un océano tropical sin mojarte!','https://res.cloudinary.com/dhglqmt1n/image/upload/v1771298761/x1fsedubf7abavn3wyeh.gif'),(15,'rana','rana','','https://res.cloudinary.com/dhglqmt1n/image/upload/v1771292979/rrfkv6704krguiqcrlbo.png');
 /*!40000 ALTER TABLE `promociones` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-14 15:03:36
+-- Dump completed on 2026-02-17  0:26:55

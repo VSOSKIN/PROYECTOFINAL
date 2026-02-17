@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "@cloudinary/url-gen": "^1.22.0",
+    "cloudinary": "^2.9.0",
+    "multer": "^2.0.2",
     "next": "15.5.7",
+    "nodemailer": "^8.0.1",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   }
