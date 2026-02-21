@@ -1,0 +1,84 @@
+<style>
+body {
+  background:#000;
+  color:white;
+  font-family:Arial;
+}
+
+.form {
+  max-width:600px;
+  margin:50px auto;
+  background:#111;
+  padding:30px;
+  border:1px solid lime;
+  border-radius:15px;
+}
+
+label { color:lime }
+
+input, textarea {
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+  background:#000;
+  color:white;
+  border:1px solid lime;
+  border-radius:8px;
+}
+
+button {
+  background:lime;
+  border:none;
+  padding:10px 20px;
+  font-weight:bold;
+  border-radius:8px;
+}
+
+img {
+  max-width:100%;
+  margin-bottom:15px;
+  border-radius:10px;
+}
+</style>
+
+<div class="form">
+
+<h2>Editar promoción</h2>
+
+<form method="POST" action="/admin/promociones/editar/{{promocion.id}}" enctype="multipart/form-data">
+
+<label>Título</label>
+<input type="text" name="titulo" value="{{promocion.titulo}}" required>
+
+<label>Subtítulo</label>
+<input type="text" name="subtitulo" value="{{promocion.subtitulo}}">
+
+<label>Cuerpo</label>
+<textarea name="cuerpo">{{promocion.cuerpo}}</textarea>
+
+{{#if promocion.imagen_id}}
+
+<img src="{{promocion.imagen_id}}">
+
+<br><br>
+
+<a href="/admin/promociones/borrar-imagen/{{promocion.id}}"
+   style="background:red;color:white;padding:8px 15px;border-radius:8px;text-decoration:none">
+   🗑 Borrar imagen
+</a>
+
+<br><br>
+
+{{/if}}
+
+
+<label>Nueva imagen</label>
+<input type="file" name="imagen">
+
+<button type="submit">Guardar cambios</button>
+
+<a href="/admin/promociones" style="color:lime;margin-left:15px">Cancelar</a>
+
+</form>
+
+</div>

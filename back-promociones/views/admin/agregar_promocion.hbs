@@ -1,0 +1,62 @@
+<style>
+body {
+  background:black;
+  color:white;
+  font-family:Arial;
+}
+
+.form {
+  max-width:600px;
+  margin:50px auto;
+  background:#111;
+  padding:30px;
+  border:1px solid lime;
+  border-radius:15px;
+}
+
+label { color:lime }
+
+input, textarea {
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+  background:black;
+  color:white;
+  border:1px solid lime;
+  border-radius:8px;
+}
+
+button {
+  background:lime;
+  border:none;
+  padding:10px 20px;
+  font-weight:bold;
+  border-radius:8px;
+}
+</style>
+
+<div class="form">
+
+<h2>Nueva promoción</h2>
+
+<form method="POST" action="/admin/promociones/nuevo" enctype="multipart/form-data">
+
+<label>Título</label>
+<input type="text" name="titulo" required>
+
+<label>Subtítulo</label>
+<input type="text" name="subtitulo">
+
+<label>Cuerpo</label>
+<textarea name="cuerpo"></textarea>
+
+<label>Imagen</label>
+<input type="file" name="imagen">
+
+<button type="submit">Guardar</button>
+
+<a href="/admin/promociones" style="color:lime;margin-left:15px">Cancelar</a>
+
+</form>
+
+</div>

@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+const app = require("../app"); // <-- Importamos la instancia de Express
+const http = require("http");
+
+const port = normalizePort(process.env.PORT || "3001");
+app.set("port", port); // <-- Aquí funciona correctamente porque app es la instancia
+
+const server = http.createServer(app);
+
+server.listen(port);
+server.on("listening", () => {
+  console.log(`Servidor escuchando en http://localhost:${port}`);
+});
+
+// Función para normalizar puerto
+function normalizePort(val) {
+  const port = parseInt(val, 10);
+  if (isNaN(port)) return val;
+  if (port >= 0) return port;
+  return false;
+}

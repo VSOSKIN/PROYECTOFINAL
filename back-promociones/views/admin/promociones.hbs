@@ -1,0 +1,142 @@
+<style>
+body {
+  background:#000;
+  font-family: Arial, sans-serif;
+  margin:0;
+}
+
+.header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  border-bottom:2px solid lime;
+}
+
+.header h2 {
+  color:lime;
+}
+
+.header a {
+  color:black;
+  background:lime;
+  padding:8px 15px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.logout {
+  background:#222 !important;
+  color:white !important;
+  border:1px solid lime;
+}
+
+.container {
+  padding:30px;
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap:20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.card {
+  background:#111;
+  border:1px solid lime;
+  border-radius:12px;
+  padding:15px;
+  color:white;
+  box-shadow:0 0 10px rgba(0,255,0,.2);
+
+  height:420px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+
+.card h3 {
+  color:lime;
+  margin-bottom:5px;
+}
+
+.card h4 {
+  color:#aaa;
+  font-weight:normal;
+}
+
+.card img {
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+
+.botones {
+  margin-top:15px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.editar {
+  color:black;
+  background:lime;
+  padding:6px 12px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.borrar {
+  color:white;
+  background:red;
+  padding:6px 12px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.card:hover{
+  box-shadow:0 0 20px lime;
+  transform:scale(1.02);
+  transition:.2s;
+}
+
+</style>
+
+<div class="header">
+  <h2>🖤 Panel de Promociones</h2>
+
+  <div>
+    <a href="/admin/promociones/nuevo">+ Nuevo</a>
+    &nbsp;
+    <a class="logout" href="/admin/login/logout">Cerrar sesión</a>
+  </div>
+</div>
+
+<div class="container">
+
+{{#each promos}}
+
+<div class="card">
+
+  <h3>{{titulo}}</h3>
+  <h4>{{subtitulo}}</h4>
+
+  <p>{{cuerpo}}</p>
+
+  {{#if imagen_id}}
+    <img src="{{imagen_id}}">
+  {{/if}}
+
+  <div class="botones">
+    <a class="editar" href="/admin/promociones/editar/{{id}}">Editar</a>
+    <a class="borrar" href="/admin/promociones/borrar/{{id}}">Borrar</a>
+  </div>
+
+</div>
+
+{{/each}}
+
+</div>
